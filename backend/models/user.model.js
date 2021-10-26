@@ -1,19 +1,25 @@
-const mongoose = require('mongoose');
-
+// Imports and packages
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true, 
-        minlength: 3
-    },
-}, {
-    timestamps: true,
-});
+// Create a schema
+const userSchema = new Schema(
+	{
+		username: {
+			type: String,
+			required: true,
+			unique: true,
+			trim: true,
+			minlength: 3,
+		},
+	},
+	{
+		timestamps: true,
+	}
+);
 
-const User = mongoose.model('User', userSchema);
+// Create a model from schema
+const User = mongoose.model("User", userSchema);
 
+// Export model
 module.exports = User;

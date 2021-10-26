@@ -1,7 +1,7 @@
 // Imports and packages
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("./config/config.db");
+const connectDB = require("./config/db.config");
 
 // Initialise express
 const app = express();

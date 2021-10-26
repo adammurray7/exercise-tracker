@@ -1,7 +1,7 @@
 // Imports and packages
 const mongoose = require("mongoose");
 require("dotenv").config();
-const URI = process.env.MONGO_DEV_URI;
+const URI = process.env.ATLAS_URI;
 
 // Connect to MongoDB
 const connectDB = async () => {

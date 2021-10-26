@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./styles/navbar.component.css";
+import logo from "../logo.png";
 
 export default class Navbar extends Component {
 	render() {
 		return (
 			<nav className="navbar">
-				<Link to="/" className="brand-name">
+				<Link to="/" className="brand">
+					<img src={logo} alt="Exercise Tracker" className="logo" />
 					<h1>Exercise Tracker</h1>
 				</Link>
 				<div className="nav">

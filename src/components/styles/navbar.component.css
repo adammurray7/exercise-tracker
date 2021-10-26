@@ -5,6 +5,16 @@
 	padding: 1rem 0;
 }
 
+.brand {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	margin-right: 1rem;
+	width: 40px;
+}
+
 .nav {
 	display: flex;
 }

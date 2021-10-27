@@ -1,19 +1,25 @@
-const mongoose = require('mongoose');
-
+// Imports and packages
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const exerciceSchema = new Schema({
-    username: {
-        type: String, required: true },
-        description: { type: String, required: true},
-        duration: { type: Number, required: true},
-        date: {type: Date, required: true },
-        
-    
-}, {
-    timestamps: true,
-});
+// Create a schema
+const exerciseSchema = new Schema(
+	{
+		username: {
+			type: String,
+			required: true,
+		},
+		description: { type: String, required: true },
+		duration: { type: Number, required: true },
+		date: { type: Date, required: true },
+	},
+	{
+		timestamps: true,
+	}
+);
 
-const Exercise = mongoose.model('Exercise', exerciseSchema);
+// Create a model from schema
+const Exercise = mongoose.model("Exercise", exerciseSchema);
 
+// Export model
 module.exports = Exercise;

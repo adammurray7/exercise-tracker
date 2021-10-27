@@ -1,0 +1,29 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	margin-right: 1rem;
+	width: 40px;
+}
+
+.nav {
+	display: flex;
+}
+
+li.nav-item {
+	margin-left: 2rem;
+	list-style-type: none;
+}
+
+.nav-link {
+	font-size: 1.1rem;
+}

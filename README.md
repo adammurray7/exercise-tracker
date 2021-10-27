@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Exercise Tracker App
+
+**Authors**: Adam Murray and Richárd Szilágyi
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

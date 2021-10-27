@@ -17,6 +17,12 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+const exercisesRouter = require('./routes/exercises');
+const usersRoutes = require('./routes/users')
+
+app.use('/exercises' , exercisesRouter);
+app.use('/users', usersRoutes);
+
 // Listen on port
 app.listen(port, () => {
 	console.log(`Server is running on port ${port}.`);

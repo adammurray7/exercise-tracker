@@ -3,12 +3,18 @@
 }
 
 body {
+	background: #f0f0fa;
 	margin: 0;
 	font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
 		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 16px;
+}
+
+main {
+	padding-bottom: 80px;
+	min-height: 85vh;
 }
 
 h1 {
@@ -30,4 +36,93 @@ h4 {
 
 a {
 	text-decoration: none;
+}
+
+.container {
+	position: relative;
+}
+
+.wrapper {
+	margin: auto;
+	width: 60%;
+	max-width: 628px;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-control {
+	display: block;
+	margin: 0.4rem 0;
+	width: 100%;
+}
+
+form input,
+form select {
+	background: linear-gradient(
+		135deg,
+		rgba(176, 0, 176, 0.1) 0%,
+		rgba(255, 80, 103, 0.1) 100%
+	);
+	background-position: 0 -30px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	font-size: 1.1rem;
+	outline: none;
+	padding: 0.4rem;
+}
+
+form input:hover,
+form select:hover {
+	background: linear-gradient(
+		135deg,
+		rgba(176, 0, 176, 0.2) 25%,
+		rgba(255, 80, 103, 0.2) 75%
+	);
+	background-position: 0 0;
+	transition: all 250ms ease-in-out;
+}
+
+form input:focus,
+form input:active,
+form select:focus,
+form select:active {
+	background: linear-gradient(
+		135deg,
+		rgba(176, 0, 176, 0.2) 25%,
+		rgba(255, 80, 103, 0.2) 75%
+	);
+	border: 1px solid #b000b0;
+	transition: background 250ms ease-in-out;
+}
+
+form .btn {
+	background: transparent;
+	border: 2px solid rgb(90, 216, 90);
+	border-radius: 5px;
+	color: rgb(90, 216, 90);
+	cursor: pointer;
+	font-size: 1.2rem;
+	margin: auto;
+	margin-top: 2rem;
+	outline: none;
+	padding: 0.4rem;
+	width: 40%;
+}
+
+form .btn:hover {
+	background: rgb(90, 216, 90);
+	color: #fff;
+	transition: all 250ms ease-in-out;
+}
+
+footer {
+	border-top: 1px solid #2f4858;
+	color: #2f4858;
+	padding-top: 0.4rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
 }

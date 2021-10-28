@@ -1,0 +1,47 @@
+@host = http://localhost:5000
+@userid = 0
+@exerciseid = 0
+
+### Users JSON
+GET {{host}}/users http/1.1
+
+### Add new user
+POST {{host}}/users http/1.1
+Content-Type: application/json
+
+{
+    "username": ""
+}
+
+### Edit a user details
+POST {{host}}/users/edit/{{userid}} http/1.1
+Content-Type: application/json
+
+{
+    "username": ""
+}
+
+### Exercises JSON
+GET {{host}}/exercises http/1.1
+
+### Add new exercise for user
+POST {{host}}/exercises http/1.1
+Content-Type: application/json
+
+{
+    "username": "",
+    "description": "",
+    "duration": 0,
+    "date": ""
+}
+
+### Update exercise details
+POST {{host}}/exercises/update/{{exerciseid}} http/1.1
+Content-Type: application/json
+
+{
+    "username": "",
+    "description": "",
+    "duration": 0,
+    "date": ""
+}

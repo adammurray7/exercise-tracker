@@ -20,10 +20,21 @@
 }
 
 li.nav-item {
-	margin-left: 2rem;
+	background: transparent;
 	list-style-type: none;
 }
 
 .nav-link {
+	border-bottom: 1px solid transparent;
+	border-radius: 5px;
+	color: #ff5067;
 	font-size: 1.1rem;
+	margin-left: 2rem;
+	padding: 0.4rem;
+}
+
+.nav-link:hover {
+	background: #ffe4e4;
+	border-bottom: 1px solid #ff5067;
+	transition: all 250ms ease-in-out;
 }

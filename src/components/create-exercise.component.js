@@ -108,6 +108,7 @@ export default class CreateExercise extends Component {
 							className="form-control"
 							value={this.state.duration}
 							onChange={this.onChangeDuration}
+							min="0"
 						></input>
 					</div>
 					<div className="form-group">

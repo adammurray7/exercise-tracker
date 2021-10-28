@@ -26,7 +26,8 @@ export default class EditExercise extends Component {
 	componentDidMount() {
 		axios
 			.get(
-				"http://localhost:5000/exercises/" + this.props.match.params.id
+				"https://exercise-tracker-ra-server.herokuapp.com/exercises/" +
+					this.props.match.params.id
 			)
 			.then((res) => {
 				this.setState({
@@ -38,14 +39,16 @@ export default class EditExercise extends Component {
 			})
 			.catch((err) => console.log(err));
 
-		axios.get("http://localhost:5000/users").then((res) => {
-			if (res.data.length > 0) {
-				let usersArr = res.data.map((user) => user.username).sort();
-				this.setState({
-					users: usersArr,
-				});
-			}
-		});
+		axios
+			.get("https://exercise-tracker-ra-server.herokuapp.com/users")
+			.then((res) => {
+				if (res.data.length > 0) {
+					let usersArr = res.data.map((user) => user.username).sort();
+					this.setState({
+						users: usersArr,
+					});
+				}
+			});
 	}
 
 	onChangeUsername(e) {
@@ -84,7 +87,7 @@ export default class EditExercise extends Component {
 
 		axios
 			.post(
-				"http://localhost:5000/exercises/update/" +
+				"https://exercise-tracker-ra-server.herokuapp.com/exercises/update/" +
 					this.props.match.params.id,
 				exercise
 			)

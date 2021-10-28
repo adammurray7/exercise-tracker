@@ -24,15 +24,17 @@ export default class CreateExercise extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("http://localhost:5000/users").then((res) => {
-			if (res.data.length > 0) {
-				let usersArr = res.data.map((user) => user.username).sort();
-				this.setState({
-					users: usersArr,
-					username: usersArr[0],
-				});
-			}
-		});
+		axios
+			.get("https://exercise-tracker-ra-server.herokuapp.com/users")
+			.then((res) => {
+				if (res.data.length > 0) {
+					let usersArr = res.data.map((user) => user.username).sort();
+					this.setState({
+						users: usersArr,
+						username: usersArr[0],
+					});
+				}
+			});
 	}
 
 	onChangeUsername(e) {
@@ -70,7 +72,10 @@ export default class CreateExercise extends Component {
 		};
 
 		axios
-			.post("http://localhost:5000/exercises", exercise)
+			.post(
+				"https://exercise-tracker-ra-server.herokuapp.com/exercises",
+				exercise
+			)
 			.then((res) => console.log(res.data));
 	}
 

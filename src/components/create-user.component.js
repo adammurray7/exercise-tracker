@@ -28,7 +28,10 @@ export default class CreateUser extends Component {
 		};
 
 		axios
-			.post("http://localhost:5000/users", user)
+			.post(
+				"https://exercise-tracker-ra-server.herokuapp.com/users",
+				user
+			)
 			.then((res) => console.log(res.data));
 
 		this.setState({ username: "" });
